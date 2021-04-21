@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense App</title>
+    <script src="./scripts/models/expense.js"></script>
+    <script src="./scripts/models/expenseOperation.js"></script>
+    <script src="./scripts/controller.js"></script>
+    <script src="https://kit.fontawesome.com/b06605e970.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        #searachBar {
+            display: none;
+         }
+        #searachBar.search {
+            display: block;
+         }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <h1 class='text-center alert-info'>Expense App</h1>
+        <div class="form-group">
+            <label for="">Id</label>
+            <input id='id' type="text" placeholder='Type Id Here' class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input id='name' type="text" placeholder="Type Name Here" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Cost</label>
+            <input id='range' type="range" class="form-range">
+        </div>
+        <div class="form-group">
+            <label for="">Date</label>
+            <input id='date' type="date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Remarks</label>
+            <!-- <input type="text"  id="remarks" class="form-control" placeholder="Type Remarks Here"> -->
+            <textarea id='remarks' class='form-control'  cols="30" rows="5" placeholder="Type Remarks Here">
+
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="">URL</label>
+            <input id='url' type="text" class="form-control">
+        </div>
+     <br>
+    <div class='form-group'>
+        <button class="btn btn-primary" id="add">Add</button>
+        <button class="btn btn-danger" id="remove">Delete</button>
+        <button class="btn btn-info" id="search">Search</button>
+        <button class="btn btn-warning"  id="update">Update</button>
+        <button class="btn btn-success" id="save" >Save</button>
+        <button class="btn btn-secondary" id="load">Load</button>
+        <button class="btn btn-warning" id="sort">Sort</button>
+        <button class="btn btn-info" id="loadfromserver">Load From Server</button>
+        <button class="btn btn-secondary" id="clear">Clear All</button>
+    </div>
+    <hr>
+    <div class="form-group" id="searachBar">
+        <input type="text" placeholder="Search Bar" class="form-control" id="searchQuery">
+    </div>
+    
+    <br>
+    <h3 class='alert-success'>Total Records <output id="total"></output> Mark Records <output id="mark"></output> UnMark Records <output id="unmark"></output></h3>
+    <div class='row'>
+    <table class='table table-bordered'>
+        <thead class='table-dark'>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Date</th>
+                <th>Remarks</th>
+                <th>URL</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody id="expenses">
+
+        </tbody>
+    </table>
+    <h5 class='alert-warning'>Total Cost</h5>
+</div>
+</div>
+
+</body>
+</html>

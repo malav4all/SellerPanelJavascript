@@ -1,0 +1,19 @@
+{
+    "expenses" : [{
+        "id" : 1001,
+        "name" : "Malav",
+        "cost" : 111,
+        "date" : "10-10-2020",
+        "remarks" : "aaaa",
+        "url" : "https://www.brain-mentors.com"
+    },
+    {
+        "id" : 1002,
+        "name" : "Xyz",
+        "cost" : 111,
+        "date" : "10-10-2020",
+        "remarks" : "aaaa",
+        "url" : "https://www.brain-mentors.com"
+    }
+]
+}
